@@ -4,12 +4,12 @@ from requests.auth import HTTPBasicAuth
 
 # Function to read the config file
 def read_config():
-    with open('config.json', 'r') as config_file:
+    with open('../config/config.json', 'r') as config_file:
         return json.load(config_file)
 
 # Function to write to the config file
 def write_config(config):
-    with open('config.json', 'w') as config_file:
+    with open('../config/config.json', 'w') as config_file:
         json.dump(config, config_file, indent=4)
 
 # Read the existing config
