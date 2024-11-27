@@ -1,0 +1,7 @@
+{
+    "API_Key": "your_API_Key",
+    "API_Key_Secret": "your_API_Key_Secret",
+    "access_token": "your_token",
+    "AWSAccount": "your_AWSAccount",
+    "bEndProductUid": "your_bEndProductUid"
+}
