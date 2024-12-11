@@ -35,8 +35,6 @@ location_url = f"https://api.megaport.com/v2/locations?locationStatuses={status}
 
 response = requests.get(location_url, headers=bearer_token_headers, verify=False)
 
-print("megaport_staging_CheckLocations(): HtmlResponse.status_code = ", response.status_code)
-
 if response.status_code == 200:
 
     location_dictionary = response.json()
