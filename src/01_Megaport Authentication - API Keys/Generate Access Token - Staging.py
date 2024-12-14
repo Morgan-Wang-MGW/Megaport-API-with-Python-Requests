@@ -6,12 +6,12 @@ from requests.auth import HTTPBasicAuth
 
 # Function to read the config file
 def read_config():
-    with open('../config/config.json', 'r') as config_file:
+    with open('../../config/config.json', 'r') as config_file:
         return json.load(config_file)
 
 # Function to write to the config file
 def write_config(config):
-    with open('../config/config.json', 'w') as config_file:
+    with open('../../config/config.json', 'w') as config_file:
         json.dump(config, config_file, indent=4)
 
 # Read the existing config
@@ -23,9 +23,10 @@ API_Key_Secret = config['API_Key_Secret']
 
 
 ####### Get Access Token ###########
-token_url = "https://auth-m2m.megaport.com/oauth2/token"
+token_url = "https://oauth-m2m-staging.auth.ap-southeast-2.amazoncognito.com/oauth2/token"
 
 headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+
 payload = {'grant_type': 'client_credentials'}
 
 response = requests.request("POST", token_url, auth=HTTPBasicAuth(API_Key, API_Key_Secret), headers=headers, data=payload)
