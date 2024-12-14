@@ -1,5 +1,4 @@
 import json
-
 import requests
 
 # Function to read the config file
