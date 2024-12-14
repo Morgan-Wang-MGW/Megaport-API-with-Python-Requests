@@ -23,7 +23,7 @@ API_Key_Secret = config['API_Key_Secret']
 
 
 ####### Get Access Token ###########
-token_url = "https://auth-m2m.megaport.com/oauth2/token"
+token_url = "https://oauth-m2m-staging.auth.ap-southeast-2.amazoncognito.com/oauth2/token"
 
 headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 
@@ -35,9 +35,11 @@ response = requests.request("POST", token_url, auth=HTTPBasicAuth(API_Key, API_K
 if response.status_code == 200:
 
    access_token = response.json()['access_token']
+   token_expires_time = response.json()['expires_in']
 
    # Add or update a value
    config['access_token'] = access_token
+   config['token_expires_time'] = token_expires_time
    timestamp_now = datetime.datetime.now()
    config['token_timestamp'] = timestamp_now.strftime("%Y-%m-%d  %H-%M-%S")
 
