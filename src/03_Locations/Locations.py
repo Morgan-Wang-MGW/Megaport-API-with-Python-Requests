@@ -1,6 +1,5 @@
 import json
 import requests
-from requests.auth import HTTPBasicAuth
 
 # Function to read the config file
 def read_config():
@@ -37,8 +36,8 @@ response = requests.get(location_url, headers=bearer_token_headers, verify=False
 
 if response.status_code == 200:
 
+    print('Successfully get location dictionary')
     location_dictionary = response.json()
-
     # Write the location data to json file
     write_locations(location_dictionary)
 
