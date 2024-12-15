@@ -59,7 +59,7 @@ payload = json.dumps([
           # (Not all locations support diversity zones - the locations endpoint indicates available diversity zones and Port speeds for each location.)
       },
 
-      "market": "US",
+      "market": "AU",
 
       "costCentre": "Optional finance reference"
       #(Optional) A finance reference to be used for billing purposes, such as a purchase order number.
