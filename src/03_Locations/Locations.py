@@ -3,7 +3,7 @@ import requests
 
 # Function to read the config file
 def read_config():
-    with open('../config/config.json', 'r') as config_file:
+    with open('../../config/config.json', 'r') as config_file:
         return json.load(config_file)
 
 # Function to write to the location dictionary file
