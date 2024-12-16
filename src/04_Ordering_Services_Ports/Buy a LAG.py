@@ -13,7 +13,7 @@ def write_service_details(port_service_details):
     try:
         with open('lag_service_details.json', 'w') as lag_service_detials_file:
             json.dump(port_service_details, lag_service_detials_file, indent=4)
-        print("Successfully wrote locations to port_service_details.json")
+        print("Successfully wrote locations to lag_service_details.json")
     except IOError as e:
         print(f"An error occurred while writing to the file: {e}")
     except TypeError as e:
