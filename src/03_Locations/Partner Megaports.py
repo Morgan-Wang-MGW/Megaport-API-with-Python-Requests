@@ -38,7 +38,7 @@ vxcPermitted = "true" #boolean value true or false
 
 partner_url = f"https://api.megaport.com/v2/dropdowns/partner/megaports?connectType={connectType}&vxcPermitted={vxcPermitted}"
 
-response = requests.get(partner_url, headers=bearer_token_headers, verify=False)
+response = requests.get(partner_url, headers=bearer_token_headers)
 
 if response.status_code == 200:
 

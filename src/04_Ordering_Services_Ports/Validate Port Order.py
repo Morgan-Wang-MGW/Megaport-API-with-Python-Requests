@@ -70,7 +70,6 @@ payload = json.dumps([
 validate_response = requests.post(f"{port_order_url}/validate",
                         headers=bearer_token_headers,
                         data=payload,
-                        verify=False
                         )
 
 if validate_response.status_code == 200:

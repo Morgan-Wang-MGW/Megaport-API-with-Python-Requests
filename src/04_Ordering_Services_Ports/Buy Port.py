@@ -38,7 +38,7 @@ port_order_url = "https://api.megaport.com/v3/networkdesign"
 #information for Port ordering
 payload = json.dumps([
   {
-      "productName": "Python API Test Port",
+      "productName": "Python API Test Port 202412161140",
       # A descriptive name for the Port.
 
       "term": 24,
@@ -70,7 +70,6 @@ payload = json.dumps([
 order_response = requests.post(f"{port_order_url}/buy",
                         headers=bearer_token_headers,
                         data=payload,
-                        verify=False
                         )
 
 if order_response.status_code == 200:

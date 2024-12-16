@@ -77,7 +77,6 @@ payload = json.dumps([
 order_response = requests.post(f"{port_order_url}/buy",
                         headers=bearer_token_headers,
                         data=payload,
-                        verify=False
                         )
 
 if order_response.status_code == 200:

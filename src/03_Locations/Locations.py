@@ -32,7 +32,7 @@ status = "Active"
 metro = "Melbourne"
 location_url = f"https://api.megaport.com/v2/locations?locationStatuses={status}&metro={metro}"
 
-response = requests.get(location_url, headers=bearer_token_headers, verify=False)
+response = requests.get(location_url, headers=bearer_token_headers)
 
 if response.status_code == 200:
 
